@@ -1,37 +1,71 @@
+body{
+  background-color: black;
+}
+/* background */
+h1{
+  text-align: center;
+  font-family: fantasy;
+  -webkit-text-stroke: 1px white;
+  -webkit-text-fill-color: black;
+}
+/* the display of character data */
 .hud{
-  border: 5px solid black;
+  border: 5px solid white;
   margin: auto;
   width: 48%;
   border-radius: 10px;
-
+  -webkit-text-stroke: 1px white;
+  -webkit-text-fill-color: black;
 }
+/* left display */
 #player1{
   float: left;
+  text-align: center;
   background-color: blue;
 }
+/* right display */
 #player2{
   float: right;
   background-color: red;
 }
+/* player labels*/
 #p1Name{
   text-align: center;
   line-height: 0px;
   font-family: fantasy;
-  font-size: 20px;
+  font-size: 30px;
 }
 #p2Name{
   text-align: center;
   line-height: 0px;
   font-family: fantasy;
-  font-size: 20px;
+  font-size: 30px;
 }
+/*players types*/
 .type{
   margin-left: 10px;
+  text-align: left;
   font-family: fantasy;
-  font-size: 15px;
+  font-size: 25px;
 }
+/*players health*/
 .health{
   margin-left: 10px;
+  text-align: left;
   font-family: fantasy;
-  font-size: 15px;
+  font-size: 25px;
+}
+/* buttons position */
+.choose{
+  border: 1px;
+  margin-bottom: 10px;
+}
+/* button appearence */
+.p1Buttons{
+  background-color: red;
+  font-size: 25px;
+  font-family: fantasy;
+  border-radius: 10px;
+  -webkit-text-stroke: 1px black;
+  -webkit-text-fill-color: white;
 }

@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Create an ID!</title>
-    <link rel="stylesheet" href="C:\Users\Nate\Desktop\Scripts\html\style.css">
+    <title>Battle Sim!</title>
+    <link rel="stylesheet" href="C:\Users\Nate\Desktop\Scripts\Projects\HTML-Battle-Sim\style.css">
   </head>
   <body>
     <h1>Battle Simulator!</h1>
     <div class="hud" id="player1">
       <p id="p1Name">Player 1</p>
-      <p class="type">Type:</p>
-      <p class="health">HP:</p>
+      <p class="type" id="type1">Type:</p>
+      <p class="health" id="health1">HP:</p>
+      <div class="choose">
+        <button class="p1Buttons" id="p1Knight" onclick="pickedKnight()">Knight</button>
+        <button class="p1Buttons" id="p1Wizard" onclick="pickedWizard()">Wizard</button>
+        <button class="p1Buttons" id="p1Monk" onclick="pickedMonk()">Monk</button>
+      </div>
     </div>
     <div class="hud" id="player2">
       <p id="p2Name">Player 2</p>
-      <p class="type">Type:</p>
+      <p class="type" id="type2">Type:</p>
       <p class="health">HP:</p>
     </div>
-    <script type="text/javascript" src="C:\Users\Nate\Desktop\Scripts\HTML\script.js">
+    <script type="text/javascript" src="C:\Users\Nate\Desktop\Scripts\Projects\HTML-Battle-Sim\script.js">
     </script>
   </body>
 </html>
