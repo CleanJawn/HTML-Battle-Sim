@@ -26,6 +26,7 @@ h1{
 /* right display */
 #player2{
   float: right;
+  text-align: center;
   background-color: red;
 }
 /* player labels*/
@@ -61,8 +62,16 @@ h1{
   margin-bottom: 10px;
 }
 /* button appearence */
-.p1Buttons{
+.buttons1{
   background-color: red;
+  font-size: 25px;
+  font-family: fantasy;
+  border-radius: 10px;
+  -webkit-text-stroke: 1px black;
+  -webkit-text-fill-color: white;
+}
+.buttons2{
+  background-color: blue;
   font-size: 25px;
   font-family: fantasy;
   border-radius: 10px;
