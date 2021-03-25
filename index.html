@@ -3,6 +3,8 @@
   <head>
     <title>Battle Sim!</title>
     <link rel="stylesheet" href="C:\Users\Nate\Desktop\Scripts\Projects\HTML-Battle-Sim\style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
   </head>
   <body>
     <h1>Battle Simulator!</h1>
@@ -27,8 +29,16 @@
         <button class="buttons2" id="p2Monk" onclick="pickedMonk2()">Monk</button>
       </div>
     </div>
-    <div class="moves1"></div>
-    <div class="moves2"></div>
+    <div class="moves1">
+      <button class="movesButtons1" id="windup1" onclick="turn(); p1WindUp()">Wind Up</button>
+      <button class="movesButtons1" id="attack1" onclick="turn(); p1Attack()">Attack</button>
+      <button class="movesButtons1" id="defend1" onclick="turn(); p1Defend()">Defend</button>
+    </div>
+    <div class="moves2">
+      <button class="movesButtons2" id="windup2" onclick="turn(); p2WindUp()">Wind Up</button>
+      <button class="movesButtons2" id="attack2" onclick="turn(); p2Attack()">Attack</button>
+      <button class="movesButtons2" id="defend2" onclick="turn(); p1Defend()">Defend</button>
+    </div>
     <script type="text/javascript" src="C:\Users\Nate\Desktop\Scripts\Projects\HTML-Battle-Sim\script.js">
     </script>
   </body>
