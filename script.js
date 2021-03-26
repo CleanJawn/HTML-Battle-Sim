@@ -8,7 +8,8 @@ function getRandomInt(min, max) {
 
 // creating template for character types
 class Type {
-    constructor(health, attackStat, defenseStat, areDefending, areWindingUp){
+    constructor(name ,health, attackStat, defenseStat, areDefending, areWindingUp){
+        this.name = name;
         this.health = health;
         this.attackStat = attackStat;
         this.defenseStat = defenseStat;
@@ -22,15 +23,16 @@ class Type {
     // attack method
     attack(target){
         let damage;
-        let random = getRandomInt(0, target.defenseStat)/2;
+        let random = Math.floor(getRandomInt(0, target.defenseStat))/10;
+        random = Math.floor(random);
         switch(target.areDefending){
             case true:
-                damage = this.attackStat;
+                damage = this.attackStat - random;
                 
                 damage = damage/2;
                 break;
             case false:
-                damage = this.attackStat;
+                damage = this.attackStat -  random;
                 break;
         }
         switch(this.areWindingUp){
@@ -58,12 +60,12 @@ class Type {
 }
 
 //create all possible character types
-let knight1 = new Type (100, 5, 15);
-let wizard1 = new Type(100, 15, 0);
-let monk1 = new Type(100, 10, 10);
-let knight2 = new Type (100, 5, 15);
-let wizard2 = new Type(100, 15, 0);
-let monk2 = new Type(100, 10, 10);
+let knight1 = new Type ("Knight",50, 11, 100);
+let wizard1 = new Type("Wizard", 50, 12, 50);
+let monk1 = new Type("Monk", 50, 10, 150);
+let knight2 = new Type ("Knight",50, 11, 100);
+let wizard2 = new Type("Wizard", 50, 12, 50);
+let monk2 = new Type("Monk", 50, 10, 150);
 let p1;
 let p2;
 
@@ -171,27 +173,46 @@ function turnTwo(){
 
 //execute player move
 function p1WindUp(){
-    p1.windup;
+    p1.windup();
+    
 }
 function p1Attack(){
     p1.attack(p2);
-    document.getElementById("health2").innerHTML = p2.health;
+    document.getElementById("health2").innerHTML = "HP: " + p2.health;
+    checkHealth();
 }
 function p1Defend(){
     p1.defend(p2);
 }
 function p2WindUp(){
-    p2.windup
+    p2.windup();
 }
 function p2Attack(){
     p2.attack(p1);
-    document.getElementById("health1").innerHTML = p1.health;
+    document.getElementById("health1").innerHTML = "HP: " + p1.health;
+    checkHealth();
 }
-function p1Defend(){
+function p2Defend(){
     p2.defend(p1);
 }
 
-//check player health
-function checkHealth(){
+function disappear(){
+    document.getElementById("intro").style.display = "none";
+}
 
+
+//check player health
+function invisible(){
+    document.getElementById("gameOver").style.display = "none";
+}
+invisible();
+function checkHealth(){
+    if (p1.health <= 0) {
+        document.getElementById("gameOver").style.display = "inline";
+        document.getElementById("winner").innerHTML = "The " + p2.name + " is victorious!";
+    }
+    else if (p2.health <= 0) {
+        document.getElementById("gameOver").style.display = "inline";
+        document.getElementById("winner").innerHTML = "The " + p1.name + " is victorious!";
+    }
 }

@@ -1,7 +1,16 @@
 body{
   background-color: black;
+  position: relative;
 }
 /* background */
+.background{
+  position: absolute;
+  height: 500px;
+  top: 180px;
+  right: 325px;
+  z-index: -100;
+  opacity: 40%;
+}
 h1{
   text-align: center;
   font-family: fantasy;
@@ -112,4 +121,65 @@ h1{
   -webkit-text-stroke: 2px black;
   -webkit-text-fill-color: white;
   display: none;
+}
+#intro{
+  border: 10px inset green;
+  position: fixed;
+  height: 90%;
+  width: 90%;
+  background: rgb(29, 26, 26);
+  left: 50px;
+  bottom: 20px;
+  text-align: center;
+}
+#introHead{
+  font-family: fantasy;
+  -webkit-text-stroke: 1px white;
+  -webkit-text-fill-color: black;
+  font-size: 30px;
+}
+.warriorDescription{
+  color: white;
+}
+#howTo{
+  font-family: fantasy;
+  -webkit-text-stroke: 1px white;
+  -webkit-text-fill-color: black;
+  font-size: 30px;
+}
+#fight{
+  background-color: blue;
+  font-size: 25px;
+  font-family: fantasy;
+  border-radius: 10px;
+  -webkit-text-stroke: 2px black;
+  -webkit-text-fill-color: white;
+}
+#gameOver{
+  border: 10px inset green;
+  position: fixed;
+  height: 90%;
+  width: 90%;
+  background: rgb(29, 26, 26);
+  left: 50px;
+  bottom: 20px;
+  text-align: center;
+}
+.endMessage{
+  font-family: fantasy;
+  -webkit-text-stroke: 1px white;
+  -webkit-text-fill-color: black;
+  font-size: 30px;
+}
+#winner{
+  color: white;
+  font-size: 50px;
+}
+#fightAgain{
+  background-color: blue;
+  font-size: 25px;
+  font-family: fantasy;
+  border-radius: 10px;
+  -webkit-text-stroke: 2px black;
+  -webkit-text-fill-color: white;
 }

@@ -37,7 +37,27 @@
     <div class="moves2">
       <button class="movesButtons2" id="windup2" onclick="turn(); p2WindUp()">Wind Up</button>
       <button class="movesButtons2" id="attack2" onclick="turn(); p2Attack()">Attack</button>
-      <button class="movesButtons2" id="defend2" onclick="turn(); p1Defend()">Defend</button>
+      <button class="movesButtons2" id="defend2" onclick="turn(); p2Defend()">Defend</button>
+    </div>
+    <img src="C:\Users\Nate\Desktop\Scripts\Projects\HTML-Battle-Sim\background.png" class="background">
+    <div id="intro">
+      <p id="introHead">Welcome to the Arena!</p>
+      <P class="warriorDescription">You and an opponent will choose a warrior class and will duel! <br> <br> 
+      A Knight uses their knowledge of the blade to fight valiently and their armor can be the difference between an enemies attack being a deathblow! <br> <br>
+      A Wizard uses their knowledge of the arcane arts to protect itself with dangerously powerful spells, but if an opponent is able <br>
+      to get close enough to attack, it could prove dangerous for that wizard! <br><br>
+      A Monk has mastered the arts of hand to hand combat and while not as deadly as a blade, their fists can inflict some serious damage. <br>
+      Their nimble movements often can save their lives, and sometimes dodge blows entirely.</P>
+      <p id="howTo">How to Fight:</p>
+      <p class="warriorDescription"><strong>1. Attack!</strong> <br>Damage can be affected by a targets innate defense. <br><br>
+      <strong>2. Defend!</strong><br>Damage taken will be cut in half if you are attacked next turn. <br><br>
+      <strong>3. Wind Up!</strong> <br>Take a turn to windup so your next attack will do double damage.</p>  
+      <button id="fight" onclick="disappear()">Lets Fight!</button>
+    </div> 
+    <div id="gameOver">
+      <p class="endMessage">Well fought warriors!</p>
+      <p id="winner"></p>
+      <button id="fightAgain" onClick="window.location.reload();">Fight again?</button>
     </div>
     <script type="text/javascript" src="C:\Users\Nate\Desktop\Scripts\Projects\HTML-Battle-Sim\script.js">
     </script>
